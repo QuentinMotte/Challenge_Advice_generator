@@ -1,0 +1,157 @@
+/* Polices */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+/* Couleurs */
+:root{
+    --LightCyan: hsl(193, 38%, 86%);
+    --NeonGreen: hsl(150, 100%, 66%);
+    --GrayisBlue: hsl(217, 19%, 38%);
+    --DarkGrayishBlue: hsl(217, 19%, 24%);
+    --DarkBlue: hsl(218, 23%, 16%);
+}
+
+*{
+    font-family: 'manrope', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Desktop 1440px*/
+body{
+    width: 1440px;
+    text-align: center;
+    background: var(--DarkGrayishBlue);
+    
+    
+}
+
+.app{
+    width: 600px;
+    background: var(--GrayisBlue);
+    margin: 250px auto;
+    border-radius: 20px;
+    height: 330px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.adviceNumber{
+    color: var(--NeonGreen);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    margin-top: -20px;
+    letter-spacing: 5px;
+}
+
+.advice{
+    color: var(--LightCyan);
+    font-size: 1.5rem;
+    margin: 80px;
+    margin-top: -40px;
+    /* vertical-align : sub; */
+}
+
+/* they give us the svg img for this but i wanna do it by this by myself */
+
+.afterBefore{
+    position: absolute;
+    margin: 30px;
+    bottom: 40px;
+    left: 43%;
+    
+    
+}
+
+span{
+    font-size: 0.4rem;
+    padding:  3px;
+    background: var(--LightCyan);
+    margin: 3px;
+    border-radius: 20px;
+    position: relative;
+}
+
+.before::before{
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    height: 1px;
+    width: 200px;
+    content: "";
+    background: var(--LightCyan);
+    opacity: 0.3;
+    
+}
+
+.after::before{
+    top: 50%;
+    right: 50px;
+    position: absolute;
+    margin: 0 auto;
+    height: 1px;
+    width: 200px;
+    content: "";
+    background: var(--LightCyan);
+    opacity: 0.3;
+    
+}
+
+img{
+    z-index: 100;
+    position: absolute;
+    bottom: -25px;
+    left: 45.8%;
+    border-radius: 30px;
+    padding: 12px;
+    background: var(--NeonGreen);
+    transform: scale(1.2);
+    
+}
+
+img:hover{
+    filter: brightness(120%);
+    box-shadow:  0 0 19px 7px; 
+    color: var(--NeonGreen);
+    cursor: pointer;
+}
+
+/* Mobile display */
+
+@media screen and (max-width: 1000px ){
+    body{
+        max-width: 400px;
+    }
+    
+    .app{
+        width: 375px;
+    }
+    
+    .adviceNumber{
+        margin-top: -50px;
+    }
+    
+    .advice{
+        margin: 40px;
+        margin-top: -60px;
+    }
+    
+    
+    .afterBefore{
+        left: 39%;
+    }
+    
+    .before::before{
+        width: 110px;
+    }
+    
+    .after::before{
+        width: 110px;
+    }
+
+    img{
+        left: 43.5%;
+    }
+}
