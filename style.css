@@ -100,7 +100,6 @@ span{
 }
 
 img{
-    z-index: 100;
     position: absolute;
     bottom: -25px;
     left: 45.8%;
