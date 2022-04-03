@@ -12,7 +12,7 @@ function getAdvice() {
 }
 getAdvice();
 
-// for swap advice when click on the icon
+
 btnSwapAdvice.addEventListener("click", () => {
     getAdvice();
 });
